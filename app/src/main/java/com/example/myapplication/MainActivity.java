@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onSearchButtonClicked(View view) {
         Intent intent = new Intent(this, ResultActivity.class);
+        EditText keywordText = findViewById(R.id.keywordText);
+        intent.putExtra("QUERY", keywordText.getText().toString());
         startActivity(intent);
     }
 
