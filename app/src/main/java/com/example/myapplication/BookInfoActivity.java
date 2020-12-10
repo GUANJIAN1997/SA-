@@ -17,7 +17,7 @@ public class BookInfoActivity extends AppCompatActivity {
         String title = intent.getStringExtra("title");
         String author = intent.getStringExtra("author");
         String publisher = intent.getStringExtra("publisher");
-        int price = intent.getIntExtra("price", 100);
+        int price = intent.getIntExtra("price", 0);
         String isbn = intent.getStringExtra("isbn");
 
         // ユーザインタフェースコンポーネントへの参照の取得

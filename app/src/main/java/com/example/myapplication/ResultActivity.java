@@ -89,7 +89,6 @@ public class ResultActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView parent, View view, int position, long id) {
                         Intent intent = new Intent(ResultActivity.this, BookInfoActivity.class);
-                        startActivity(intent);
                         BookInfo bookInfo = bookList.get(position);
                         intent.putExtra("id", bookInfo.ID);
                         intent.putExtra("title", bookInfo.title);
@@ -97,6 +96,8 @@ public class ResultActivity extends AppCompatActivity {
                         intent.putExtra("publisher", bookInfo.publisher);
                         intent.putExtra("price", bookInfo.price);
                         intent.putExtra("isbn", bookInfo.isbn);
+                        startActivity(intent);
+
                     }
                 });
             }
